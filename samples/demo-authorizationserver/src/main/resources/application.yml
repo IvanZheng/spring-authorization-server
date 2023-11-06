@@ -24,6 +24,7 @@ spring:
           github:
             user-name-attribute: login
 
+
 logging:
   level:
     root: INFO

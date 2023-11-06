@@ -6,6 +6,11 @@ plugins {
 group = "org.springframework.security"
 description = "Spring Authorization Server"
 
+repositories {
+	maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' } // 阿里云仓库
+	mavenCentral() // Maven中心仓库
+}
+
 springRelease {
 	repositoryOwner = "spring-projects"
 	weekOfMonth = 2
@@ -14,6 +19,7 @@ springRelease {
 	apiDocUrl = "https://docs.spring.io/spring-authorization-server/docs/{version}/api/"
 	replaceSnapshotVersionInReferenceDocUrl = true
 }
+
 
 if (hasProperty("buildScan")) {
 	buildScan {
